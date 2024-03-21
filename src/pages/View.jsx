@@ -30,11 +30,11 @@ const handleToggleTodo = id => {
     <>
     <div className='container '>
     <h1 className='mt-5'>My ToDo List</h1>
-        <div className='d-flex justify-content-between' >
+        <div className=' ' >
           <div   >
            
             <div className='d-flex justify-Content- between'>
-              <input className='form-control w-90' type="text" onChange={e => setText(e.target.value)}   placeholder='Add Todo...'/>
+              <input className='form-control w-25' type="text" onChange={e => setText(e.target.value)}   placeholder='Add Todo...'/>
               <button onClick={handleAddTodo} className='btn btn-primary ms-3 ' >Submitt</button>
             </div>
             <div className='border rounded mt-4 '>
@@ -47,7 +47,9 @@ const handleToggleTodo = id => {
                         <input type="checkbox" checked={todo.completed} onChange={() => handleToggleTodo(todo.id)} />
                          <span  >{todo.text}</span>
                       </div>
-                    <div><button onClick={() => handleDeleteTodo(todo.id)} className='btn btn-primary'><i className="fa-solid fa-trash"></i></button></div>
+                    <div>
+                      <button onClick={() => handleDeleteTodo(todo.id)} className='btn btn-primary'><i className="fa-solid fa-trash"></i></button>
+                      </div>
                    </li>
                 ))}
                     </ul>
